@@ -1,0 +1,21 @@
+{
+    "pages": [
+      "pages/login/login",
+        "pages/index/index",
+        "pages/sales/sales",
+        "pages/outbound/outbound",
+        "pages/inventory/inventory",
+        "pages/warehousing/warehousing",
+        "pages/logs/logs",
+        "pages/expand/expand",
+        "pages/refund/refund"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "INNER",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

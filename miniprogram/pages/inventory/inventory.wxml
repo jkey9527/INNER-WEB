@@ -1,0 +1,26 @@
+<!--pages/inventory/inventory.wxml-->
+<view class="container">
+    <view class="pageTitle">库存</view>
+    <view class="main">
+        <view class="items">
+            <view class="label">货号</view>
+            <view class="input">
+                <input bindinput="bindinput" placeholder="请输入货号"></input>
+                <text class="iconfont icon-sousuo icon"></text>
+            </view>
+        </view>
+        <view class="menu">
+            <view class="item" wx:for="{{typeArr}}" wx:key="index" data-key="{{index}}" bindtap="bindtapMenu">
+                <text style="color:#1195db;" wx:if="{{curMenu==item.value}}">{{item.label}}</text>
+                <text wx:else>{{item.label}}</text>
+            </view>
+        </view>
+        <view class="list">
+            <view class="item" wx:for="{{list}}" wx:key="index">
+                货号：KW12309 类目：上衣 颜色：黑色 尺码：均码 数量：1
+                <!-- <view class="label">{{item.label}}</view> -->
+                <!-- <view class="value">{{item.value}}</view> -->
+            </view>
+        </view>
+    </view>
+</view>

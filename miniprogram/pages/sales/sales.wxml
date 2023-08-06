@@ -1,0 +1,41 @@
+<!--pages/sales/sales.wxml-->
+<view class="container">
+    <view class="pageTitle">销售统计</view>
+    <view class="menu">
+        <view class="item" wx:for="{{menuArr}}" wx:key="index" data-key="{{index}}" bindtap="bindtapMenu">
+            <text style="color:#1195db;" wx:if="{{curMenu==item.value}}">{{item.label}}</text>
+            <text wx:else>{{item.label}}</text>
+        </view>
+    </view>
+    <view class="time" wx:if="{{curMenu==5}}">
+        <picker mode="date" value="{{startTime}}" data-ref="startTime" start="2023-08-01" end="2050-09-01" bindchange="bindDateChange">
+            <view class="picker">
+            {{startTime?startTime:'开始时间'}}
+            </view>
+        </picker>
+        ~
+        <picker mode="date" value="{{endTime}}" data-ref="endTime" start="2023-08-01" end="2050-09-01"  bindchange="bindDateChange">
+            <view class="picker">
+            {{endTime?endTime:'结束时间'}}
+            </view>
+        </picker>
+    </view>
+    <view class="main">
+        <view class="title">销售数据</view>
+        <view class="content">
+            <view class="list list_sale" wx:for="{{saleArr}}" wx:key="index">
+                <view class="value">{{item.value}}</view>
+                <view class="label">{{item.label}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view class="title">类目数据</view>
+        <view class="content">
+            <view class="list" wx:for="{{typeArr}}" wx:key="index">
+                <view class="value">{{item.value}}</view>
+                <view class="label">{{item.label}}</view>
+            </view>
+        </view>
+    </view>
+</view>

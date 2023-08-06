@@ -1,0 +1,67 @@
+<!--pages/warehousing/warehousing.wxml-->
+<!-- 入库 -->
+<view class="container">
+    <view class="pageTitle">商品入库</view>
+    <form catchsubmit="formSubmit" class="form">
+    <view class="main">
+        <view class="items">
+            <view class="label">货号</view>
+            <input class="value" name="pro_no" value="{{data.pro_no}}" placeholder="请输入货号"></input>
+        </view>
+        <view class="items">
+            <view class="label">类型</view>
+            <picker class="value" data-ref="type" bindchange="bindPickerChange" range-key="label" range="{{typeArr}}">
+                <view class="picker">{{typeArr[type].label}}
+                    <text class="iconfont icon-xiala"></text>
+                </view>
+            </picker>
+        </view>
+        <view class="items column">
+            <view class="label">更多</view>
+            <view class="value menu">
+                <view class='label'>颜色</view>
+                <view class='label'>尺码</view>
+                <view class='label'>数量</view>
+            </view>
+        </view>
+        <view class="items" wx:for="{{productDetailBeans}}" wx:key="index">
+            <view class="label"></view>
+            <view class="sub">
+                <picker class="value" data-ref="color" data-name="{{index}}" bindchange="bindPickerChange" range-key="label" range="{{colorArr}}">
+                    <view class="picker">{{colorArr[color[index]].label}}
+                        <text class="iconfont icon-xiala"></text>
+                    </view>
+                </picker>
+                <picker class="value" data-ref="size" data-name="{{index}}" bindchange="bindPickerChange" range-key="label" range="{{sizeArr}}">
+                    <view class="picker">{{sizeArr[size[index]].label}}
+                        <text class="iconfont icon-xiala"></text>
+                    </view>
+                </picker>
+                <picker class="value" data-ref="num" data-name="{{index}}" bindchange="bindPickerChange" range-key="label" range="{{numArr}}">
+                    <view class="picker">{{numArr[num[index]].label}}
+                        <text class="iconfont icon-xiala"></text>
+                    </view>
+                </picker>
+            </view>
+            <text class="iconfont icon-jiahao add" data-key="{{index}}" bindtap="add" wx:if="{{index==0}}"></text>
+            <text class="iconfont icon-jian add" data-key="{{index}}" bindtap="delete" wx:else></text>
+        </view>
+        <view class="items">
+            <view class="label">实进</view>
+            <input class="value" name="pro_real_price" value="{{data.pro_real_price}}" type="digit" placeholder="请输入实进"></input>
+        </view>
+        <view class="items">
+            <view class="label">进价</view>
+            <input class="value" name="pro_price" value="{{data.pro_price}}" type="digit" placeholder="请输入进价"></input>
+        </view>
+        <view class="items">
+            <view class="label">售价</view>
+            <input class="value" name="pro_sell_price" value="{{data.pro_sell_price}}" type="digit" placeholder="请输入售价"></input>
+        </view>
+    </view>
+    <view class="submit">
+        <button type="default" bindtap="cancel">取消</button>
+        <button type="primary" formType="submit">确定</button>
+    </view>
+    </form>
+</view>

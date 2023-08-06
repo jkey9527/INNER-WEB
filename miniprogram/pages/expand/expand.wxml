@@ -1,0 +1,29 @@
+<!--pages/expand/expand.wxml-->
+<view class="container">
+    <view class="pageTitle">支出</view>
+    <view class="main">
+        <view class="items">
+            <view class="label">项目</view>
+            <input class="value" placeholder="请输入支出项目"></input>
+        </view>
+        <view class="items">
+            <view class="label">金额</view>
+            <input class="value" type="digit" placeholder="请输入支出金额"></input>
+        </view>
+        <view class="items">
+            <view class="label">支出人</view>
+            <radio-group class="value">
+                <label class="radio">
+                    <radio value="1" checked="{{person==1}}"/>佳
+                </label>
+                <label class="radio">
+                    <radio value="2" checked="{{person==2}}"/>丹
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="submit">
+        <button type="default" bindtap="cancel">取消</button>
+        <button type="primary" bindtap="submit">确定</button>
+    </view>
+</view>

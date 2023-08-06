@@ -1,0 +1,18 @@
+<!--pages/expand/expand.wxml-->
+<view class="container">
+    <view class="pageTitle">退款</view>
+    <view class="main">
+        <view class="items">
+            <view class="label">项目</view>
+            <input class="value" placeholder="请输入退款项目"></input>
+        </view>
+        <view class="items">
+            <view class="label">金额</view>
+            <input class="value" type="digit" placeholder="请输入退款金额"></input>
+        </view>
+    </view>
+    <view class="submit">
+        <button type="default" bindtap="cancel">取消</button>
+        <button type="primary" bindtap="submit">确定</button>
+    </view>
+</view>

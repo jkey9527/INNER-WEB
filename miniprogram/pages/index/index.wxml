@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container index">
+  <!-- <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="search">
+    <view class="label">货号：</view>
+     <view class="input">
+      <input placeholder="请输入货号"></input>
+      <text class="iconfont icon-sousuo icon"></text>
+    </view>
+    <text class="iconfont icon-jiahao add" data-ref="warehousing" bindtap="nav_to"></text>
+  </view>
+  <view class="main">
+    <view class="items" data-ref="warehousing" bindtap="nav_to">
+      <text class="iconfont icon-ruku"></text>
+      <view class="text">入库</view>
+    </view>
+    <view class="items" data-ref="outbound" bindtap="nav_to">
+      <text class="iconfont icon-chukuchaxun"></text>
+      <view class="text">出库</view>
+    </view>
+    <view class="items" data-ref="sales" bindtap="nav_to">
+      <text class="iconfont icon-tongji"></text>
+      <view class="text">销售</view>
+    </view>
+    <view class="items" data-ref="inventory" bindtap="nav_to">
+      <text class="iconfont icon-stock"></text>
+      <view class="text">库存</view>
+    </view>
+    <view class="items" data-ref="expand" bindtap="nav_to">
+      <text class="iconfont icon-claim"></text>
+      <view class="text">支出</view>
+    </view>
+    <view class="items" data-ref="refund" bindtap="nav_to">
+      <text class="iconfont icon-huaban32"></text>
+      <view class="text">退款</view>
+    </view>
+    <view class="items" data-ref="manage" bindtap="nav_to">
+      <text class="iconfont icon-zhanghaoguanli"></text>
+      <view class="text">管理</view>
+    </view>
+    <view class="items" data-ref="settlement" bindtap="nav_to">
+      <text class="iconfont icon-jiesuanguanli"></text>
+      <view class="text">结算</view>
+    </view>
+    <view class="items" data-ref="logs" bindtap="nav_to">
+      <text class="iconfont icon-caozuorizhi"></text>
+      <view class="text">日志</view>
+    </view>
+  </view>
+</view>

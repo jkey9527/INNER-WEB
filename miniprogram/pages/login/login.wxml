@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+    <!-- <view class="title">登录</view> -->
+    <view class="main">
+        <view class="items">
+            <view class="label">账号</view>
+            <view class="value">
+                <input placeholder="请输入账号" data-key="user_no" bindinput="bindinput"/>
+            </view>
+        </view>
+        <view class="items">
+            <view class="label">密码</view>
+            <view class="value">
+                <input placeholder="请输入密码" password="true" data-key='user_password' bindinput="bindinput"/>
+            </view>
+        </view>
+    </view>
+    <view class="submit">
+        <button type="primary" bindtap='login'>登录</button>
+    </view>
+</view>

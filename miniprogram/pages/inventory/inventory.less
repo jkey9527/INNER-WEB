@@ -1,0 +1,72 @@
+/* pages/inventory/inventory.wxss */
+.container{
+    padding:0;
+    .main{
+        width:90%;
+        .items{
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            margin-top:30rpx;
+            .label{
+                width:100rpx;
+                color:#333;
+            }
+            .input{
+                position:relative;
+                width:100%;
+                input{
+                  border:2rpx solid #efefef;
+                  border-radius:8rpx;
+                  padding:10rpx;
+                  font-size:26rpx;
+                }
+                .icon{
+                  position:absolute;
+                  top:16rpx;
+                  right:20rpx;
+                  font-size:36rpx;
+                  color:#888;
+                }
+              }
+            .value{
+                width:100%;
+                .picker{
+                    border:2rpx solid #efefef;
+                    border-radius:8rpx;
+                    padding:0 10rpx;
+                    height:68rpx;
+                    line-height:68rpx;
+                    font-size:26rpx;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    .iconfont{
+                        font-size:40rpx;
+                    }
+                }
+            }
+        }
+        .menu{
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            width:100%;
+            margin-top:40rpx;
+            .item{
+                font-size:26rpx;
+                margin-left:10rpx;
+            }
+        }
+        .list{
+            margin-top:30rpx;
+            padding:30rpx;
+            box-shadow:  5px 5px 10px #efefef,-5px -5px 10px #efefef;
+            .item{
+                &:not(:first-child){
+                    margin-top:30rpx;
+                }
+            }
+        }
+    }
+}
